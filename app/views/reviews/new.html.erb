@@ -1,18 +1,18 @@
-<div class="container-fluid center">
+<div class="container">
   <div class="row">
     <div class="col-sm-9 col-sm-offset-3">
       <h1>Reviews#new</h1>
       <p>Find me in app/views/reviews/new.html.erb</p>
 
-      <div class="form-horizontal">
-        <div class="form-group text-align">
           <%= simple_form_for [@restaurant, @review] do |f| %>
             <%= f.input :content %>
+            <%= f.label :rating %>
+            <br>
             <%= f.select :rating, [1, 2, 3, 4, 5] %>
+            <br>
             <%= f.submit "add a review", class: "btn btn-primary" %>
           <% end %>
-        </div>
-      </div>
+
     </div>
   </div>
 </div>
