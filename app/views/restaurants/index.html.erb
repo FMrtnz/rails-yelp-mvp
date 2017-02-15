@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Home</h2>
+
+<div class="container">
+  <div class="text-center">
+  <% @restaurants.each do |restaurant| %>
+      <h3><%= restaurant.name %></h3>
+      <%= link_to "See details", @restaurant, class: "btn btn-primary"%>
+    <% end %>
+  </div>
+</div>
+
+</div>
